@@ -1,0 +1,181 @@
+@font-face {
+    font-family: CurlzMt;
+    src: url(/_assets/CurlzMT.ttf);
+    font-family: RobotoCondensed;
+    src: url(/_assets/RobotoCondensed-Regular.ttf)
+}
+body, html{
+    height: 100%;
+}
+
+.banner{
+    font-family: 'RobotoCondensed';
+    font-size: 44px;
+}
+
+.navbar{
+    opacity: 0.8;
+}
+
+.btn{
+    background-color: #9223F7;
+    border: none;
+    width: 150px;
+}
+
+.btn:hover{
+    background-color: rgb(132, 0, 255);
+    border: none;
+}
+
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .btn:hover span {
+    padding-right: 25px;
+  }
+  
+  .btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.getstarted{
+    padding-right:67%;
+}
+
+.logo{
+    width: 100px;
+    height: 40px;
+    font-family: 'CurlzMt';
+}
+
+.form-control{
+    width: 300px;
+}
+
+.overlay{
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.9), 
+            rgba(0, 0, 0, 0.5)
+          ), url(/_assets/background.jpeg);
+        height: 100%; 
+        width: 100%;
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: cover;
+}
+
+.intro{
+    padding-top:20%;
+    color: white;
+    vertical-align: middle;
+}
+
+.intro_content{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    opacity: 0.5;
+}
+
+@media(max-width:586px){
+   .intro{
+       padding-top:20%;
+   }
+   .nav_search{
+       display: none;
+   }
+   .form-control{
+       width: 95%;
+   }
+
+}
+
+@media(max-height:813px){
+    .intro{
+        padding-top: 40%;
+    }
+}
+
+@media(max-height:569px){
+    .intro{
+        padding-top:5%;
+    }
+}
+
+
+.nav-login, .nav-register{
+    color: #9223F7;
+}
+
+.nav-login:hover, .nav-register:hover{
+    color: rgb(103, 0, 199);
+}
+
+.modal-sign{
+    background-color: #32363E;
+    border: 1.5px solid  rgb(29, 29, 29);
+    color: rgb(88, 88, 88);
+
+}
+.form-control{
+    background-color: #262B33;
+    border: 1.5px solid rgb(70, 70, 70);
+}
+.form-control:active{
+    border: 1px solid black;
+}
+
+
+.tab-content, .nav-sign-tabs{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.modal-footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
+
+.cost{
+    height: 100%;
+    width: 100%;
+    background-color: #262B33;
+}
+
+/* .overlay {
+    position: relative;
+    transition: all 1s;
+}
+
+.overlay:after {
+    content: '\A';
+    position: absolute;
+    width: 100%; 
+    height:100%;
+    top:0; 
+    left:0;
+    background:rgba(0,0,0,0.5);
+    opacity: 1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+   -moz-transition: all 0.5s;
+}
+.overlay:hover:after {
+    opacity: 0;
+} */
