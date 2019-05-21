@@ -18,7 +18,7 @@ export const router = new Router({
     { path: '/home', component: LandingPage },
     { path: '*', redirect: '/home' },
     { path: '/congratulations', component: HomePage },
-    { path: '/users', component: Users}
+    { path: '/profile', component: Users}
 
   ]
 });

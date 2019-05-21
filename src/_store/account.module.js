@@ -9,12 +9,15 @@ const state = user
 const actions = {
     login({ dispatch, commit }, { username, password }) {
         commit('loginRequest', { username });
-    
+
         userService.login(username, password)
             .then(
                 user => {
                     commit('loginSuccess', user);
-                    router.push('/');
+                    router.push('/profile');
+                    setTimeout(() => {
+                        dispatch('alert/success', "Logged in successfully!", { root: true });
+                    })
                 },
                 error => {
                     commit('loginFailure', error);
@@ -22,21 +25,24 @@ const actions = {
                 }
             );
     },
+    
     logout({ commit }) {
         userService.logout();
         commit('logout');
+        then(mounted());
+
+ 
     },
     register({ dispatch, commit }, user) {
         commit('registerRequest', user);
-    
+
         userService.register(user)
             .then(
                 user => {
                     commit('registerSuccess', user);
-                    router.push('/login');
+                    router.push('/');
                     setTimeout(() => {
-                        // display success message after route change completes
-                        dispatch('alert/success', 'Registration successful', { root: true });
+                        dispatch('alert/success', "Registration successful, now log in!", { root: true });
                     })
                 },
                 error => {
@@ -80,4 +86,14 @@ export const account = {
     state,
     actions,
     mutations
+};
+
+function mounted() {
+    if (localStorage.getItem('reloaded')) {
+
+        localStorage.removeItem('reloaded');
+    } else {
+        localStorage.setItem('reloaded', '1');
+        location.reload();
+    }
 };

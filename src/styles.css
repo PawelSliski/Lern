@@ -16,6 +16,9 @@ body, html{
 .navbar{
     opacity: 0.8;
 }
+.nav-link{
+    margin-top: 8px;
+}
 
 .btn{
     background-color: #9223F7;

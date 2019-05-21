@@ -56,7 +56,7 @@ const mutations = {
             return user;
         })
     }
-};
+}
 
 export const users = {
     namespaced: true,
