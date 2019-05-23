@@ -29,7 +29,9 @@ const actions = {
     logout({ commit }) {
         userService.logout();
         commit('logout');
-        then(mounted());
+        setTimeout(() => {
+            dispatch('alert/success', 'Logged out successfully!', { root: true })
+        });
 
  
     },
@@ -86,14 +88,4 @@ export const account = {
     state,
     actions,
     mutations
-};
-
-function mounted() {
-    if (localStorage.getItem('reloaded')) {
-
-        localStorage.removeItem('reloaded');
-    } else {
-        localStorage.setItem('reloaded', '1');
-        location.reload();
-    }
 };
