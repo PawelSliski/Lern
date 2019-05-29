@@ -17,23 +17,32 @@ const actions = {
                     router.push('/profile');
                     setTimeout(() => {
                         dispatch('alert/success', "Logged in successfully!", { root: true });
+                        setTimeout(function () {
+                            $('.alert').fadeOut('slow');
+                        }, 2000);
                     })
                 },
                 error => {
                     commit('loginFailure', error);
-                    dispatch('alert/error', error, { root: true });
+                    dispatch('alert/error', error, { root: true }); 
+                    setTimeout(function() {
+                        $('.alert').fadeOut('slow');
+                    }, 2000);
                 }
             );
     },
-    
+
     logout({ commit }) {
         userService.logout();
         commit('logout');
         setTimeout(() => {
-            dispatch('alert/success', 'Logged out successfully!', { root: true })
+            dispatch('alert/success', 'Logged out successfully!', { root: true }); 
+            setTimeout(function () {
+                $('.alert').fadeOut('slow');
+            }, 2000);
         });
 
- 
+
     },
     register({ dispatch, commit }, user) {
         commit('registerRequest', user);
@@ -45,11 +54,17 @@ const actions = {
                     router.push('/');
                     setTimeout(() => {
                         dispatch('alert/success', "Registration successful, now log in!", { root: true });
+                        setTimeout(function() {
+                            $('.alert').fadeOut('slow');
+                        }, 2000);
                     })
                 },
                 error => {
                     commit('registerFailure', error);
-                    dispatch('alert/error', error, { root: true });
+                    dispatch('alert/error', error, { root: true }); 
+                    setTimeout(function() {
+                        $('.alert').fadeOut('slow');
+                    }, 2000);
                 }
             );
     }

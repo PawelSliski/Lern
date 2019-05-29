@@ -12,18 +12,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="/src/styles.css">
+
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
 </head>
-
 <body>
-
     <div class="site-blocks-cover overlay" data-aos="fade" id="home-section">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="/home"> <img src="/src/_assets/LogoLern.svg" class="logo" alt=""></a>
-            <form class="nav_search form-inline my-2 my-lg-0 col-lg-4 col-md-7 col-sm-8 col-xs-1">
-                <input class="form-control mr-sm-2 bg-transparent col-lg-7 text-white" type="search" id="search"
-                    placeholder="What do you want to learn?" aria-label="Search">
+            <form class="nav_search form-inline my-2 my-lg-0 col-lg-4 col-md-7 col-sm-8 col-xs-1" id="youtube">
+                <input class="form-control mr-sm-2 bg-transparent col-lg-7 text-white form" type="search" id="search"
+                    required placeholder="What do you want to learn?" aria-label="Search">
                 <button class="btn btn-outline-primary my-sm-0 bg-transparent text-white col-lg-1 col-md-1 col-sm-1"
                     type="submit" value="search"><i class="fas fa-search"></i></button>
             </form>
@@ -31,33 +29,28 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarNav">
-
-
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item nav_login pr-4">
                         <a class="nav-link" href="/login">Log in!</a>
                     </li>
                     <li class="nav-item pr-3">
-                        <a href="#" class="btn btn-primary"><span>Get Started</span></a>
+                        <a href="/register" class="btn btn-primary"><span>Get Started</span></a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <ul id="results"></ul>
         <div id="app"></div>
-        <div class="container mt-auto">
-
+        <div id="results"></div>
+        <div class=" elo container mt-auto">
             <div class="intro row align-items-center justify-content-center w-100 pt-5 mt-5">
-
-                <div class="col-md-10 col-lg-5 col-sm-12 text-center top mr-auto inner">
-                    <h1 class="text-left banner">Technologie jutra</h1>
+                <div class="mt-5 col-md-10 col-lg-5 col-sm-12 text-center top mr-auto inner">
+                    <h1 class="text-left banner">Leeeeeeeeern</h1>
                     <p class="pt-5 pb-5 text-left intro_content">Lorem ipsum dolor sit amet consectetur adipisicing
                         elit. Laboriosam assumenda ea quo
                         cupiditate facere deleniti fuga officia.</p>
                     <div class="getstarted">
-                        <a href="#" class="btn btn-primary"><span>Get Started</span></a>
+                        <a href="/reigster" class="btn btn-primary"><span>Get Started</span></a>
                     </div>
                 </div>
             </div>
@@ -73,10 +66,10 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-        <script src="/src/youtube.js"></script>
-        <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script> 
-        <script src="https://apis.google.com/js/client.js?onload=init"></script>
-        <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+    <script src="/src/youtube.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 </body>
 
 </html>

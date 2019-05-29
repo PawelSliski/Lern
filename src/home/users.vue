@@ -3,9 +3,8 @@
     <p>
       <router-link to="/" class="btn btn-primary logout-link" tag="button" onClick="window.location.href=window.location.href">Logout</router-link>
     </p>
-    <h1>Hi {{account.user.firstName}}!</h1>
-    <p>You're logged in with Vue + Vuex & JWT!!</p>
-    <h3>Users from secure api end point:</h3>
+    <h1>Welcome to Lern, {{account.user.firstName}}!</h1>
+    <h3>List of users:</h3>
     <em v-if="users.loading">Loading users...</em>
     <span v-if="users.error" class="text-danger">ERROR: {{users.error}}</span>
     <ul v-if="users.items">
@@ -22,6 +21,7 @@
       </li>
     </ul>
   </div>
+  
 </template>
 
 <style>
@@ -29,17 +29,18 @@ body {
   color: white;
 }
 .profile {
+  padding-top: 20px;
   align-self: auto;
-  height: fit-content;
-  width: fit-content;
-  height: inherit;
-  width: inherit;
   margin: none;
+  width: 90%;
+  float: left;
+  height: 50%;
 }
+
 .nav-link {
   display: none;
 }
-.intro {
+.inner {
   display: none;
 }
 

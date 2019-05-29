@@ -19,7 +19,6 @@ export const router = new Router({
     { path: '*', redirect: '/home' },
     { path: '/congratulations', component: HomePage },
     { path: '/profile', component: Users}
-
   ]
 });
 
